@@ -1,0 +1,35 @@
+{
+  "name": "tsdaorm",
+  "version": "1.0.5",
+  "description": "A lite DAO style TypeScript ORM which uses npm:mysql2.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "keywords": [
+    "dao",
+    "typescript",
+    "ts",
+    "orm",
+    "mysql2"
+  ],
+  "author": "Shah Alvi Hossain",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0"
+  },
+  "dependencies": {
+    "mysql2": "^3.12.0",
+    "typescript": "^5.8.2"
+  }
+}
