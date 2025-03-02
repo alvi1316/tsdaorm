@@ -383,7 +383,7 @@ export class JoinDAO<T extends DTOType> {
                 map[k.replace(`table${index+1}_`, "")] = e[k]
                 dtoMapList[index] = map
             })
-            let dtoRow = dtoMapList.map((v, i) => new this._dtoTypeList[i]().setFromObject(v))
+            let dtoRow = dtoMapList.map((v, i) => new this._dtoTypeList[i]().setFromDBObject(v))
             dtoList.push(dtoRow)
         })
 
