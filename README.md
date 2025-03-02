@@ -95,23 +95,6 @@ export default class UserDTO extends DTO<UserDTOType> {
         const setChildFromObject = (obj: any) => {
             this.name = DTO.assignIfTypeMatches(
                 this.name, 
-                obj[this.varToCol.name]
-            )
-            this.email = DTO.assignIfTypeMatches(
-                this.email, 
-                obj[this.varToCol.email]
-            )
-            this.password = DTO.assignIfTypeMatches(
-                this.password, 
-                obj[this.varToCol.password]
-            )
-        }
-
-        // Setter function from table 
-        // column names for class variables
-        const setChildFromDBObject = (obj: any) => {
-            this.name = DTO.assignIfTypeMatches(
-                this.name, 
                 obj[DTO.keyByValue(this.varToCol, this.varToCol.name)]
             )
             this.email = DTO.assignIfTypeMatches(
@@ -121,6 +104,23 @@ export default class UserDTO extends DTO<UserDTOType> {
             this.password = DTO.assignIfTypeMatches(
                 this.password, 
                 obj[DTO.keyByValue(this.varToCol, this.varToCol.password)]
+            )
+        }
+
+        // Setter function from table 
+        // column names for class variables
+        const setChildFromDBObject = (obj: any) => {
+            this.name = DTO.assignIfTypeMatches(
+                this.name, 
+                obj[this.varToCol.name]
+            )
+            this.email = DTO.assignIfTypeMatches(
+                this.email, 
+                obj[this.varToCol.email]
+            )
+            this.password = DTO.assignIfTypeMatches(
+                this.password, 
+                obj[this.varToCol.password]
             )
         }
 
@@ -242,22 +242,22 @@ export default class TokenDTO extends DTO<TokenDTOType> {
         const setChildFromObject = (obj: any) => {
             this.userId = DTO.assignIfTypeMatches(
                 this.userId, 
-                obj[this.varToCol.userId]
+                obj[DTO.keyByValue(this.varToCol, this.varToCol.userId)]
             )
             this.jwt = DTO.assignIfTypeMatches(
                 this.jwt, 
-                obj[this.varToCol.jwt]
+                obj[DTO.keyByValue(this.varToCol, this.varToCol.jwt)]
             )
         }
 
         const setChildFromDBObject = (obj: any) => {
             this.userId = DTO.assignIfTypeMatches(
                 this.userId, 
-                obj[DTO.keyByValue(this.varToCol, this.varToCol.userId)]
+                obj[this.varToCol.userId]
             )
             this.jwt = DTO.assignIfTypeMatches(
                 this.jwt, 
-                obj[DTO.keyByValue(this.varToCol, this.varToCol.jwt)]
+                obj[this.varToCol.jwt]
             )
         }
         super("token", setChildFromObject, setChildFromDBObject)
