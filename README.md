@@ -1,6 +1,6 @@
 <img src ="https://img.shields.io/badge/TypeScript-v5.8.2-blue"/> <img src ="https://img.shields.io/badge/mysql2-v3.12.0-red"/>
 
-## TSDAORM (TypeScript Data Access Object Relational Mapping)
+## TSDAORM (TypeScript Data Access Object Relational Mapping) NPM Link: [TSDAORM](https://www.npmjs.com/package/tsdaorm)
 ### Description 
 TSDAORM is a lite TypeScript based DAO style ORM which uses [mysql2](https://www.npmjs.com/package/mysql2).
 
