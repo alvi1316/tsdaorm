@@ -1,6 +1,6 @@
 {
   "name": "tsdaorm",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A lite DAO style TypeScript ORM which uses npm:mysql2.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

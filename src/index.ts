@@ -283,7 +283,7 @@ export class DAO<T extends DTOType, TDTO extends DTO<T>> {
 
     public async execute(): Promise<TDTO[] | null> {
 
-        const where = ` ${this._where.join(" ")} AND isdeleted = 0 `
+        const where = ` ${this._where.join(" ")} ${this._where.length==0?"":"AND"} isdeleted = 0 `
         const order = this._order.length != 0 ? `ORDER BY ${this._order.join(", ")}` : ""
         
         const query: string = `SELECT * FROM ${new this._dtoType().getTableName()} WHERE ${where} ${order} ${this._limit} ${this._offset}`
